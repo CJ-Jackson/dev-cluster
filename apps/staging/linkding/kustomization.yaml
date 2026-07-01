@@ -6,3 +6,4 @@ resources:
   - ../../base/linkding/
   - cloudflare-secret.yaml
   - cloudflare.yaml
+  - ingress.yaml
