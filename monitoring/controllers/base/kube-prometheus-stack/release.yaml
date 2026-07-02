@@ -33,3 +33,8 @@ spec:
         ingressClassName: traefik
         hosts:
           - grafana.ho-oh.jackson-vpn.home.arpa
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grafana.ho-oh.jackson-vpn.home.arpa
+
