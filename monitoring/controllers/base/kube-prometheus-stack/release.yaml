@@ -30,5 +30,6 @@ spec:
     grafana:
       ingress:
         enabled: true
+        ingressClassName: traefik
         hosts:
           - grafana.ho-oh.jackson-vpn.home.arpa
