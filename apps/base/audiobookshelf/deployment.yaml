@@ -23,6 +23,25 @@ spec:
           securityContext:
             allowPrivilegeEscalation: false
 
+          volumeMounts:
+            - mountPath: /config
+              name: audiobookshelf-data
+              subPath: config/
+            - mountPath: /metadata
+              name: audiobookshelf-data
+              subPath: metadata/
+            - mountPath: /audiobooks 
+              name: audiobookshelf-data
+              subPath: audiobooks/
+            - mountPath: /podcasts
+              name: audiobookshelf-data
+              subPath: podcasts/
+
           envFrom:
             - configMapRef:
                 name: env-config
+
+      volumes:
+      - name: audiobookshelf-data
+        persistentVolumeClaim:
+          claimName: audiobookshelf-data-pvc
