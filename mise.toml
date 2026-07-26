@@ -1,5 +1,5 @@
 [tools]
-flux2 = "2.9.2"
+flux2 = "2.9.3"
 k9s = "latest"
 kubectl = "latest"
 sops = "latest"
